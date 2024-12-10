@@ -1,0 +1,276 @@
+:root {
+    --main-color: #d3ad7f;
+    /*variaveis com as esilizacoes que mas vao ser usadas*/
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /*tira as bordas do inputs*/
+    border: none;
+    text-decoration: none;
+    /*tira a linha dos links*/
+    text-transform: capitalize;
+    /*para que todos os textocomece com a letra maisculas*/
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 100px;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    /*para que o cabecario sempre fique fixo naparte superior*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    /*define quem fica na frente de quem */
+    border-bottom: var(--border);
+    background-color: var(--black);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid #d3ad7f;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+
+}
+
+.icones img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icones img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+    /*espacando as letras*/
+}
+
+.home-container {
+    background: url("./img/home-img.jpg") no-repeat bottom center scroll;
+    background-position: center;
+    /*para centralizar */
+    background-size: cover;
+    /*para ocupar o espaco todo da tela*/
+
+
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+.content {
+    max-width: 50rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    /*grossura da fonte*/
+    line-height: 3rem;
+    /*espacamento entre as linhas*/
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#img-about {
+    width: 480px;
+    height: 415px;
+
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 2rem;
+    font-weight: 200;
+    /*espacamento entre as linhas*/
+
+}
+
+
+.box-container {
+    display: grid;
+    /*organiza automaticamnte se adicionado mas itens*/
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    /*forma que quero as colunas/*/
+    gap: 1.5rem;
+
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+    cursor: pointer;
+
+
+}
+
+.menu .box-container .box img {
+    height: 8rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .preco {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .preco span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    /* faz um corte no meio da palavra*/
+    font-weight: lighter;
+    /*largura da fonte mas fina que tem*/
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff;
+}
+
+.menu .box-container .box:hover>* {
+    /*>* aplica pra todo mundo que esta dentro do box */
+    color: var(--black);
+}
+
+.review .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+}
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.adrress {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*para ficar um emcima do outro*/
+
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem;
+}
+
+.footer .share img {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.footer .share img:hover{
+    background-color: var(--main-color);
+}
